@@ -7,6 +7,8 @@ This is an evaluation of a Covid-19 dataset that has been provided by a [repo](h
 - Determine if there are some conclusions this data can provide.
 - Utilize tools such as Tableau, Pandas, Python and SQL.
 
+Finished Tableau notebook is [here](https://public.tableau.com/profile/ryan4454#!/vizhome/Covid_results/CovidStory)
+
 ## **Process**
 ### **Jupyter Notebook, Python and Pandas**
 ---
