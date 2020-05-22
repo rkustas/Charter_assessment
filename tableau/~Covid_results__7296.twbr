@@ -20,7 +20,7 @@
     <WorksheetBackgroundTransparency />
     <ZoneBackgroundTransparency />
   </document-format-change-manifest>
-  <repository-location id='Covid_results' path='/workbooks' revision='1.0' />
+  <repository-location id='Covid_results' path='/workbooks' revision='1.1' />
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
     <preference name='ui.shelf.height' value='26' />
@@ -2416,6 +2416,72 @@
     </worksheet>
   </worksheets>
   <dashboards>
+    <dashboard name='Covid Story' type='storyboard'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Covid-19: What&apos;s the story with this pandemic?</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style>
+        <style-rule element='story-point-caption'>
+          <format attr='width' value='310' />
+        </style-rule>
+      </style>
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='2' w='100000' x='0' y='0'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98250' id='1' param='vert' removable='false' w='99318' x='341' y='875'>
+            <zone _.fcp.SetMembershipControl.false...type='title' _.fcp.SetMembershipControl.true...type-v2='title' h='3611' id='3' w='99318' x='341' y='875' />
+            <zone _.fcp.SetMembershipControl.false...type='flipboard-nav' _.fcp.SetMembershipControl.true...type-v2='flipboard-nav' fixed-size='150' h='16411' id='4' is-fixed='true' paired-zone-id='5' removable='false' w='99318' x='341' y='4486' />
+            <zone _.fcp.SetMembershipControl.false...type='flipboard' _.fcp.SetMembershipControl.true...type-v2='flipboard' h='78228' id='5' paired-zone-id='4' removable='false' w='99318' x='341' y='20897'>
+              <flipboard active-id='12' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point caption='First I took a look at the total number of Confirmed cases, Deaths, and Recovery cases throughout the lifespan of Covid-19 so far, now lets take a look at the assortment broken down by region.' captured-sheet='Totals' id='1' />
+                  <story-point caption='I then wanted to see worldwide Covid-19 data and where Covid confirmed cases were the highest. If large numbers of deaths were correlated with large numbers of confirmed cases, then what is the healthcare response like and what are governments doing about it?' captured-sheet='Map' id='2'>
+                    <capturedDeltas>
+                      <worksheet name='Map'>
+                        <style delta-type='added'>
+                          <style-rule element='axis'>
+                            <encoding attr='space' class='0' field='[federated.1nisg7j1wk1k7y10bqnxu0ppqs0x].[none:Latitude:qk]' field-type='quantitative' max='10539705.224454015' min='-551487.37718989991' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+                            <encoding attr='space' class='0' field='[federated.1nisg7j1wk1k7y10bqnxu0ppqs0x].[none:Longitude:qk]' field-type='quantitative' max='16702363.183346242' min='-16069209.695822675' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+                          </style-rule>
+                        </style>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                  <story-point caption='Taking a look at the trend per month for confirmed cases and deaths worldwide we can see that a linear trend can describe best how time correlates to the number of deaths and an exponential relationship best describes how time relates to confirmed cases.  Most significantly the greatest increase in confirmed cases and deaths are between March and April when safe and safer at home policies were first being formed.  As the policies have been implemented the curve is flattening worldwide.  It is worth noting that the total amount of deaths relative to confirmed cases  is very small, and only a fraction die.' captured-sheet='Trend(worldwide)' id='3' />
+                  <story-point caption='The correlation between confirmed cases and deaths excluding the United Staes are .86 which cannot predict that if you contract Covid-19 you are most likely going to die.  There are many other factors to consider when determining causality in this case.  We know that not all people are reporting, and those that have symptoms may have gotten better on their own without being tested and deemed a confirmed case.  There is still caution needed when discussing Covid-19 and deaths as well as much more investigation to be done.' captured-sheet='Correl(worldwide)' id='4' />
+                  <story-point caption='Great to see that nearly 30% of confirmed cases are reporting recovery and only 7% have died.  ' captured-sheet='% of confirmed' id='5' />
+                  <story-point caption='The correlation between confirmed cases and recovered cases worldwide is not as strong as the correlation between confirmed and deaths.  However the number of recovered cases is much greater than deaths.' captured-sheet='Correl(worldwide)confirmedrecovery' id='6' />
+                  <story-point caption='This can be seen much better on the dashboard tab...however the country filters apply to only the worldwide section as you can narrow things down by country if you feel like it.  The month filter will drill the entire dashboard down to a moment in time while the US filter will filter the total cases and % cases by the group Worldwide, US or other.  The trend charts will filter the maps below and only highlight what you chose.  There is a sample average line and trend lines that best fit the data.' captured-sheet='Covid-19' id='7' />
+                  <story-point caption='Same format as the worldwide map although this also includes a tooltip that will look at county and state' captured-sheet='Map(US)' id='8' />
+                  <story-point caption='Same format as the worldwide trend and correlations are identical.  ' captured-sheet='Trend(US)' id='9' />
+                  <story-point caption='Trend identical to worldwide patterns, the totals are much more muted, a stronger correlation here than worldwide' captured-sheet='Correl(US)' id='10' />
+                  <story-point caption='A much weaker trend in the US when talking about confirmed and recovered cases.  Again several other factors to consider.' captured-sheet='Correl(worldwide)confirmedrecovery (2)' id='11' />
+                  <story-point caption='See conclusions below...' captured-sheet='' id='12' />
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' flipboard-zone-id='5' forceUpdate='true' h='51860' id='6' story-point-id='12' w='55302' x='19150' y='26149'>
+          <formatted-text>
+            <run>Conclusions&#10;</run>
+            <run fontalignment='0'>
+There is a strong correlation between deaths and confirmed cases, there is a weaker correlation between recovered cases and confirmed cases but the total count is much smaller and the % of the total for recovered cases is much higher relative to confirmed cases.  There is a correlation between recoveries and deaths that is low worldwide and in the United States this correlation is much higher.  This may be due to population and total cases worldwide being significantly higher.  Overall, I would love to get some sampling and testing done to further evaluate the dataset as well as pull in demographic data worldwide and within the United States.  Cheers!!!</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <simple-id uuid='{FCDEB82A-3F5F-4C89-A349-CF108AEF6660}' />
+    </dashboard>
     <dashboard name='Covid-19'>
       <layout-options>
         <title>
@@ -2627,8 +2693,8 @@
           </layout-options>
           <size maxheight='2600' minheight='2600' sizing-mode='vscroll' />
           <zones>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='79' w='100000' x='0' y='0'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98250' id='78' param='vert' w='99318' x='341' y='875'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='83' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98250' id='82' param='vert' w='99318' x='341' y='875'>
                 <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' h='9956' id='50' w='100000' x='0' y='0'>
                   <formatted-text>
                     <run bold='true' fontalignment='1' fontcolor='#a0cbe8' fontsize='14'>Covid -19 Pandemic</run>
@@ -2855,215 +2921,8 @@
       </devicelayouts>
       <simple-id uuid='{BBB01895-2E3F-4C72-8324-A72FA0AEA3E7}' />
     </dashboard>
-    <dashboard name='Story 1' type='storyboard'>
-      <layout-options>
-        <title>
-          <formatted-text>
-            <run>Covid-19: What&apos;s the story with this pandemic?</run>
-          </formatted-text>
-        </title>
-      </layout-options>
-      <style>
-        <style-rule element='story-point-caption'>
-          <format attr='width' value='310' />
-        </style-rule>
-      </style>
-      <size sizing-mode='automatic' />
-      <zones>
-        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='2' w='100000' x='0' y='0'>
-          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98250' id='1' param='vert' removable='false' w='99318' x='341' y='875'>
-            <zone _.fcp.SetMembershipControl.false...type='title' _.fcp.SetMembershipControl.true...type-v2='title' h='3611' id='3' w='99318' x='341' y='875' />
-            <zone _.fcp.SetMembershipControl.false...type='flipboard-nav' _.fcp.SetMembershipControl.true...type-v2='flipboard-nav' fixed-size='150' h='16411' id='4' is-fixed='true' paired-zone-id='5' removable='false' w='99318' x='341' y='4486' />
-            <zone _.fcp.SetMembershipControl.false...type='flipboard' _.fcp.SetMembershipControl.true...type-v2='flipboard' h='78228' id='5' paired-zone-id='4' removable='false' w='99318' x='341' y='20897'>
-              <flipboard active-id='12' nav-type='caption' show-nav-arrows='true'>
-                <story-points>
-                  <story-point caption='First I took a look at the total number of Confirmed cases, Deaths, and Recovery cases throughout the lifespan of Covid-19 so far, now lets take a look at the assortment broken down by region.' captured-sheet='Totals' id='1' />
-                  <story-point caption='I then wanted to see worldwide Covid-19 data and where Covid confirmed cases were the highest. If large numbers of deaths were correlated with large numbers of confirmed cases, then what is the healthcare response like and what are governments doing about it?' captured-sheet='Map' id='2'>
-                    <capturedDeltas>
-                      <worksheet name='Map'>
-                        <style delta-type='added'>
-                          <style-rule element='axis'>
-                            <encoding attr='space' class='0' field='[federated.1nisg7j1wk1k7y10bqnxu0ppqs0x].[none:Latitude:qk]' field-type='quantitative' max='10539705.224454015' min='-551487.37718989991' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
-                            <encoding attr='space' class='0' field='[federated.1nisg7j1wk1k7y10bqnxu0ppqs0x].[none:Longitude:qk]' field-type='quantitative' max='16702363.183346242' min='-16069209.695822675' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
-                          </style-rule>
-                        </style>
-                      </worksheet>
-                    </capturedDeltas>
-                  </story-point>
-                  <story-point caption='Taking a look at the trend per month for confirmed cases and deaths worldwide we can see that a linear trend can describe best how time correlates to the number of deaths and an exponential relationship best describes how time relates to confirmed cases.  Most significantly the greatest increase in confirmed cases and deaths are between March and April when safe and safer at home policies were first being formed.  As the policies have been implemented the curve is flattening worldwide.  It is worth noting that the total amount of deaths relative to confirmed cases  is very small, and only a fraction die.' captured-sheet='Trend(worldwide)' id='3' />
-                  <story-point caption='The correlation between confirmed cases and deaths excluding the United Staes are .86 which cannot predict that if you contract Covid-19 you are most likely going to die.  There are many other factors to consider when determining causality in this case.  We know that not all people are reporting, and those that have symptoms may have gotten better on their own without being tested and deemed a confirmed case.  There is still caution needed when discussing Covid-19 and deaths as well as much more investigation to be done.' captured-sheet='Correl(worldwide)' id='4' />
-                  <story-point caption='Great to see that nearly 30% of confirmed cases are reporting recovery and only 7% have died.  ' captured-sheet='% of confirmed' id='5' />
-                  <story-point caption='The correlation between confirmed cases and recovered cases worldwide is not as strong as the correlation between confirmed and deaths.  However the number of recovered cases is much greater than deaths.' captured-sheet='Correl(worldwide)confirmedrecovery' id='6' />
-                  <story-point caption='This can be seen much better on the dashboard tab...however the country filters apply to only the worldwide section as you can narrow things down by country if you feel like it.  The month filter will drill the entire dashboard down to a moment in time while the US filter will filter the total cases and % cases by the group Worldwide, US or other.  The trend charts will filter the maps below and only highlight what you chose.  There is a sample average line and trend lines that best fit the data.' captured-sheet='Covid-19' id='7' />
-                  <story-point caption='Same format as the worldwide map although this also includes a tooltip that will look at county and state' captured-sheet='Map(US)' id='8' />
-                  <story-point caption='Same format as the worldwide trend and correlations are identical.  ' captured-sheet='Trend(US)' id='9' />
-                  <story-point caption='Trend identical to worldwide patterns, the totals are much more muted, a stronger correlation here than worldwide' captured-sheet='Correl(US)' id='10' />
-                  <story-point caption='A much weaker trend in the US when talking about confirmed and recovered cases.  Again several other factors to consider.' captured-sheet='Correl(worldwide)confirmedrecovery (2)' id='11' />
-                  <story-point caption='See conclusions below...' captured-sheet='' id='12' />
-                </story-points>
-              </flipboard>
-            </zone>
-          </zone>
-          <zone-style>
-            <format attr='border-color' value='#000000' />
-            <format attr='border-style' value='none' />
-            <format attr='border-width' value='0' />
-            <format attr='margin' value='8' />
-          </zone-style>
-        </zone>
-        <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' flipboard-zone-id='5' forceUpdate='true' h='51860' id='6' story-point-id='12' w='55302' x='19150' y='26149'>
-          <formatted-text>
-            <run>Conclusions&#10;</run>
-            <run fontalignment='0'>
-There is a strong correlation between deaths and confirmed cases, there is a weaker correlation between recovered cases and confirmed cases but the total count is much smaller and the % of the total for recovered cases is much higher relative to confirmed cases.  There is a correlation between recoveries and deaths that is low worldwide and in the United States this correlation is much higher.  This may be due to population and total cases worldwide being significantly higher.  Overall, I would love to get some sampling and testing done to further evaluate the dataset as well as pull in demographic data worldwide and within the United States.  Cheers!!!</run>
-          </formatted-text>
-        </zone>
-      </zones>
-      <simple-id uuid='{FCDEB82A-3F5F-4C89-A349-CF108AEF6660}' />
-    </dashboard>
   </dashboards>
   <windows source-height='30'>
-    <window class='worksheet' name='Totals'>
-      <cards>
-        <edge name='left'>
-          <strip size='160'>
-            <card type='pages' />
-            <card type='filters' />
-            <card type='marks' />
-            <card type='measures' />
-          </strip>
-        </edge>
-        <edge name='top'>
-          <strip size='2147483647'>
-            <card type='columns' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='rows' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='title' />
-          </strip>
-        </edge>
-      </cards>
-      <viewpoint>
-        <default-map-tool-selection tool='2' />
-      </viewpoint>
-      <simple-id uuid='{D550EDE0-322B-42EC-B7D7-E897406E0294}' />
-    </window>
-    <window class='worksheet' name='Map'>
-      <cards>
-        <edge name='left'>
-          <strip size='160'>
-            <card type='pages' />
-            <card type='filters' />
-            <card type='marks' />
-          </strip>
-        </edge>
-        <edge name='top'>
-          <strip size='2147483647'>
-            <card type='columns' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='rows' />
-          </strip>
-          <strip size='31'>
-            <card type='title' />
-          </strip>
-        </edge>
-        <edge name='right'>
-          <strip size='160'>
-            <card pane-specification-id='0' param='[federated.1nisg7j1wk1k7y10bqnxu0ppqs0x].[sum:Confirmed:qk]' type='size' />
-            <card pane-specification-id='0' param='[federated.1nisg7j1wk1k7y10bqnxu0ppqs0x].[sum:Deaths:qk]' type='color' />
-          </strip>
-        </edge>
-      </cards>
-      <viewpoint>
-        <map-scale-visibility value='0' />
-        <default-map-tool-selection tool='1' />
-        <default-map-unit-selection mapunit='2' />
-      </viewpoint>
-      <simple-id uuid='{58ACCEF2-20A1-4E6D-BD62-D0C25E529A73}' />
-    </window>
-    <window class='worksheet' name='Trend(worldwide)'>
-      <cards>
-        <edge name='left'>
-          <strip size='193'>
-            <card type='pages' />
-            <card type='filters' />
-            <card type='marks' />
-          </strip>
-        </edge>
-        <edge name='top'>
-          <strip size='2147483647'>
-            <card type='columns' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='rows' />
-          </strip>
-          <strip size='31'>
-            <card type='title' />
-          </strip>
-        </edge>
-        <edge name='bottom'>
-          <strip size='96'>
-            <card type='caption' />
-          </strip>
-        </edge>
-        <edge name='right'>
-          <strip size='160'>
-            <card pane-specification-id='1' param='[federated.1nisg7j1wk1k7y10bqnxu0ppqs0x].[:Measure Names]' type='color' />
-          </strip>
-        </edge>
-      </cards>
-      <simple-id uuid='{499126D9-3F88-4DD6-A54F-8674C92A310D}' />
-    </window>
-    <window class='worksheet' name='% of confirmed'>
-      <cards>
-        <edge name='left'>
-          <strip size='219'>
-            <card type='pages' />
-            <card type='filters' />
-            <card type='marks' />
-            <card type='measures' />
-          </strip>
-        </edge>
-        <edge name='top'>
-          <strip size='2147483647'>
-            <card type='columns' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='rows' />
-          </strip>
-          <strip size='31'>
-            <card type='title' />
-          </strip>
-        </edge>
-      </cards>
-      <simple-id uuid='{25DF240F-3C8D-4A7F-B480-3A382A1EA869}' />
-    </window>
-    <window class='worksheet' name='Correl(worldwide)'>
-      <cards>
-        <edge name='left'>
-          <strip size='160'>
-            <card type='pages' />
-            <card type='filters' />
-            <card type='marks' />
-          </strip>
-        </edge>
-        <edge name='top'>
-          <strip size='2147483647'>
-            <card type='columns' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='rows' />
-          </strip>
-        </edge>
-      </cards>
-      <viewpoint>
-        <default-map-tool-selection tool='2' />
-      </viewpoint>
-      <simple-id uuid='{23567C6E-43CD-485D-8263-7D9445842BC7}' />
-    </window>
     <window class='worksheet' name='Correl(worldwide)confirmedrecovery'>
       <cards>
         <edge name='left'>
@@ -3138,7 +2997,162 @@ There is a strong correlation between deaths and confirmed cases, there is a wea
       <active id='54' />
       <simple-id uuid='{73CCA91A-5B1C-44C1-8B9B-A7E9D55FF5A0}' />
     </window>
-    <window class='worksheet' name='Map(US)'>
+    <window class='dashboard' maximized='true' name='Covid Story'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{5C06E3FA-1684-406E-B95E-552676B5D49E}' />
+    </window>
+    <window class='worksheet' name='Correl(worldwide)confirmedrecovery (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{A2BC5D0E-5D11-4C0A-BB24-2FFC2B21624B}' />
+    </window>
+    <window class='worksheet' name='Correl(worldwide)(recovered)(deaths) (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{8CEBACB4-2661-4695-9EE0-30CBE7EFEBFF}' />
+    </window>
+    <window class='worksheet' hidden='true' name='% of confirmed'>
+      <cards>
+        <edge name='left'>
+          <strip size='219'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{25DF240F-3C8D-4A7F-B480-3A382A1EA869}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Correl(US)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{7AF5969A-B7CF-4158-A63A-BB70BDF98053}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Correl(worldwide)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{23567C6E-43CD-485D-8263-7D9445842BC7}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Map'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1nisg7j1wk1k7y10bqnxu0ppqs0x].[sum:Confirmed:qk]' type='size' />
+            <card pane-specification-id='0' param='[federated.1nisg7j1wk1k7y10bqnxu0ppqs0x].[sum:Deaths:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <map-scale-visibility value='0' />
+        <default-map-tool-selection tool='1' />
+        <default-map-unit-selection mapunit='2' />
+      </viewpoint>
+      <simple-id uuid='{58ACCEF2-20A1-4E6D-BD62-D0C25E529A73}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Map(US)'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -3173,12 +3187,34 @@ There is a strong correlation between deaths and confirmed cases, there is a wea
       </viewpoint>
       <simple-id uuid='{E5771AC9-FFAE-4C18-9F8D-AAC9E45EC1AF}' />
     </window>
-    <window class='dashboard' name='Story 1'>
-      <viewpoints />
-      <active id='5' />
-      <simple-id uuid='{5C06E3FA-1684-406E-B95E-552676B5D49E}' />
+    <window class='worksheet' hidden='true' name='Totals'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{D550EDE0-322B-42EC-B7D7-E897406E0294}' />
     </window>
-    <window class='worksheet' name='Trend(US)'>
+    <window class='worksheet' hidden='true' name='Trend(US)'>
       <cards>
         <edge name='left'>
           <strip size='193'>
@@ -3211,10 +3247,10 @@ There is a strong correlation between deaths and confirmed cases, there is a wea
       </cards>
       <simple-id uuid='{E83E1E45-75BC-472F-9B66-71421DC34784}' />
     </window>
-    <window class='worksheet' name='Correl(US)'>
+    <window class='worksheet' hidden='true' name='Trend(worldwide)'>
       <cards>
         <edge name='left'>
-          <strip size='160'>
+          <strip size='193'>
             <card type='pages' />
             <card type='filters' />
             <card type='marks' />
@@ -3227,58 +3263,22 @@ There is a strong correlation between deaths and confirmed cases, there is a wea
           <strip size='2147483647'>
             <card type='rows' />
           </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
         </edge>
-      </cards>
-      <viewpoint>
-        <default-map-tool-selection tool='2' />
-      </viewpoint>
-      <simple-id uuid='{7AF5969A-B7CF-4158-A63A-BB70BDF98053}' />
-    </window>
-    <window class='worksheet' name='Correl(worldwide)confirmedrecovery (2)'>
-      <cards>
-        <edge name='left'>
+        <edge name='bottom'>
+          <strip size='96'>
+            <card type='caption' />
+          </strip>
+        </edge>
+        <edge name='right'>
           <strip size='160'>
-            <card type='pages' />
-            <card type='filters' />
-            <card type='marks' />
-          </strip>
-        </edge>
-        <edge name='top'>
-          <strip size='2147483647'>
-            <card type='columns' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='rows' />
+            <card pane-specification-id='1' param='[federated.1nisg7j1wk1k7y10bqnxu0ppqs0x].[:Measure Names]' type='color' />
           </strip>
         </edge>
       </cards>
-      <viewpoint>
-        <default-map-tool-selection tool='2' />
-      </viewpoint>
-      <simple-id uuid='{A2BC5D0E-5D11-4C0A-BB24-2FFC2B21624B}' />
-    </window>
-    <window class='worksheet' maximized='true' name='Correl(worldwide)(recovered)(deaths) (2)'>
-      <cards>
-        <edge name='left'>
-          <strip size='160'>
-            <card type='pages' />
-            <card type='filters' />
-            <card type='marks' />
-          </strip>
-        </edge>
-        <edge name='top'>
-          <strip size='2147483647'>
-            <card type='columns' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='rows' />
-          </strip>
-        </edge>
-      </cards>
-      <viewpoint>
-        <default-map-tool-selection tool='2' />
-      </viewpoint>
-      <simple-id uuid='{8CEBACB4-2661-4695-9EE0-30CBE7EFEBFF}' />
+      <simple-id uuid='{499126D9-3F88-4DD6-A54F-8674C92A310D}' />
     </window>
     <window class='worksheet' hidden='true' name='Weblink'>
       <cards>
