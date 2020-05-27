@@ -20,8 +20,8 @@ CREATE TABLE IF NOT EXISTS `covid` (
     PRIMARY KEY (`ID`)
 ) ENGINE = InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
-DROP TABLE IF EXISTS `raw_data`;
-    
+DROP TABLE IF EXISTS `covid`;
+
     
  --Preliminary analysis--    
 SELECT * FROM `covid` LIMIT 10;

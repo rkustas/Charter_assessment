@@ -7,7 +7,7 @@ This is an evaluation of a Covid-19 dataset that has been provided by a [repo](h
 - Determine if there are some conclusions this data can provide.
 - Utilize tools such as Tableau, Pandas, Python and SQL.
 
-## Finished Tableau notebook is [here](https://public.tableau.com/profile/ryan4454#!/vizhome/Covid_results/CovidStory)
+## Finished Tableau notebook is [here](https://public.tableau.com/profile/ryan4454#!/vizhome/Covid_results/Covid)
 
 ## **Process**
 ### **Jupyter Notebook, Python and Pandas**
@@ -20,8 +20,11 @@ This is an evaluation of a Covid-19 dataset that has been provided by a [repo](h
         `load_sql = """LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/Covid-19.csv' INTO TABLE covid.raw_data FIELDS TERMINATED BY ',' IGNORE 1 LINES;"""
 `
 
-4.  I spent hours trying to take care of this but just decided a work around was to use SQLAlchemy in the jupyter notebook environment.
+4.  In the interest of time I found a workaround for this which you can see [here](https://github.com/rkustas/Charter_assessment/blob/master/jupyter/Covid-19-Bing.ipynb)
+
+
 ---
+
 ### **SQL Alchemy**
 1.  Created a connection string and engine and then loaded the data into a table called covid with some vanilla SQLAlchemy:
 
@@ -81,7 +84,7 @@ This is an evaluation of a Covid-19 dataset that has been provided by a [repo](h
 ### **Tableau**
 1.  I connected mySQL to Tableau Desktop by passing in my credentials and a SQL statment that encapsulated the whole table.
 2.  I then evaluated Covid-19 within Tableau Desktop looking for trends in data and visually display what was happening with this pandemic.
-3.  The workbook can be seen publically [here](https://public.tableau.com/profile/ryan4454#!/vizhome/Covid_results/CovidStory).
+3.  The workbook can be seen publically [here](https://public.tableau.com/profile/ryan4454#!/vizhome/Covid_results/Covid).
 
 ---
 
